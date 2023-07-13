@@ -4,7 +4,7 @@ from docx import Document
 def combine_text_from_file(file_path):
     with open(file_path, 'r') as file:
         lines = file.readlines()
-        combined_text = ' '.join([line.strip()[9:-2] for line in lines if line.strip().startswith('"text"')])
+        combined_text = ' '.join([line.strip()[10:-1] for line in lines if line.strip().startswith('"text"')])
 
     return combined_text
 
